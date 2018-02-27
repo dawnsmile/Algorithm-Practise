@@ -1,4 +1,5 @@
 # movie = [6,1,3,6,3,2,7,4]
+# time comlexity:O(n)
 # two non-overlapping subarray, length = k, l
 
 sumlist=[movie[0]]

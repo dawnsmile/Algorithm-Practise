@@ -14,7 +14,7 @@ for idx,i in enumerate(s):
 	if needtodelete[i] == 0:
 		needtodelete[i]=idx
 	for j in char:
-		if j < i:
+		if j < i :
 			needtodelete[i]=min(needtodelete[i],needtodelete[j])
 	appear.add(i)
 	for j in char:
