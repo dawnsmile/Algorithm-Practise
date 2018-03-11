@@ -14,7 +14,21 @@ import java.util.List;
  */
 class Solution {
     public List<Interval> merge(List<Interval> intervals) {
-        Interval[] a = intervals.toArray(new String[0]);
-        Arrays.sort(a,(a,b)->a.s - b.s);
+        if(intervals.)
+        Interval[] a = intervals.toArray(new Interval[intervals.size()]);
+        Arrays.sort(a,(b,c)->b.start - c.start);
+        int pointer = 0;
+        int modifyPointer = 0;
+        while (pointer < a.length){
+            if (a[pointer].start>a[modifyPointer].end){
+                modifyPointer++;
+                a[modifyPointer] = a[pointer];
+            }else{
+                if (a[pointer].end>a[modifyPointer].end)
+                    a[modifyPointer].end = a[pointer].end;
+                pointer++;
+            }
+        }
+        return Arrays.asList(Arrays.copyOfRange(a, 0,modifyPointer));
     }
 }
