@@ -14,7 +14,7 @@ import java.util.List;
  */
 class Solution {
     public List<Interval> merge(List<Interval> intervals) {
-        if(intervals.)
+        // if(intervals.)
         Interval[] a = intervals.toArray(new Interval[intervals.size()]);
         Arrays.sort(a,(b,c)->b.start - c.start);
         int pointer = 0;
